@@ -4,6 +4,10 @@
  */
 package ebill;
 
+import java.awt.print.PrinterException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Bahir
@@ -31,7 +35,7 @@ public class Ebilldisplay extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtprint = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        btnprint = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 102, 255));
@@ -67,10 +71,10 @@ public class Ebilldisplay extends javax.swing.JFrame {
         txtprint.setRows(5);
         jScrollPane1.setViewportView(txtprint);
 
-        jButton2.setText("Print");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnprint.setText("Print");
+        btnprint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnprintActionPerformed(evt);
             }
         });
 
@@ -100,7 +104,7 @@ public class Ebilldisplay extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnprint)
                 .addGap(178, 178, 178))
         );
         jPanel1Layout.setVerticalGroup(
@@ -127,7 +131,7 @@ public class Ebilldisplay extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnprint))
                 .addGap(14, 14, 14))
         );
 
@@ -203,9 +207,13 @@ public class Ebilldisplay extends javax.swing.JFrame {
                 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnprintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprintActionPerformed
+        try {
+            txtprint.print();
+        } catch (PrinterException ex) {
+            Logger.getLogger(Ebilldisplay.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnprintActionPerformed
 
     private void txtcidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcidActionPerformed
         // TODO add your handling code here:
@@ -247,8 +255,8 @@ public class Ebilldisplay extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnprint;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

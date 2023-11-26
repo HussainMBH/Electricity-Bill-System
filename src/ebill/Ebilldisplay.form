@@ -102,7 +102,7 @@
                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnprint" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -137,7 +137,7 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnprint" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
@@ -194,12 +194,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnprint">
           <Properties>
             <Property name="text" type="java.lang.String" value="Print"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnprintActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
